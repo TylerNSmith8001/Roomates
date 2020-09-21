@@ -1,12 +1,12 @@
 import React, {useState} from "react"
-import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom"
+import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom"
 
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
 import Home from "./Home"
-import About from "./About"
-import Contact from "./Contact"
-import LogIn from "./LogIn"
+import UnderConstruction from "./pages/UnderConstruction"
+import LogIn from "./pages/LogIn"
+import LogOut from "./pages/LogOut"
 
 function App() {    
     //don't forget to use useRouteMatch if needed
@@ -25,19 +25,29 @@ function App() {
               <Header isLogged="isLoggedIn"/>
               <Switch>
                 <Route path="/login">
-                <Redirect to="/"/>
+                  <Redirect to="/"/>
                 </Route>
-                <Route exact path="/">
+                <Route exact path="/logout">
+                  <LogOut setIsLoggedIn={setIsLoggedIn}/>
+                </Route>
+
+                <Route exact path="/about">
+                  <UnderConstruction/>
+                </Route>
+                <Route exact path="/contact">
+                  <UnderConstruction/>
+                </Route>
+                <Route exact path="/privacy">
+                  <UnderConstruction/>
+                </Route>
+                <Route exact path="/terms">
+                  <UnderConstruction/>
+                </Route>
+
+                <Route path="">
                   <Home/>
                 </Route>
-                <Route path="/about">
-                    <About/>
-                </Route>
-                <Route path="/contact">
-                    <Contact/>
-                </Route>
               </Switch>
-              <Footer isLogged="isLoggedIn"/>
             </>
             :
 
@@ -45,11 +55,27 @@ function App() {
               <Route path="/login">
                 <LogIn setIsLoggedIn={setIsLoggedIn}/>
               </Route>
+              
+              <Route exact path="/about">
+                <UnderConstruction/>
+              </Route>
+              <Route exact path="/contact">
+                <UnderConstruction/>
+              </Route>
+              <Route exact path="/privacy">
+                <UnderConstruction/>
+              </Route>
+              <Route exact path="/terms">
+                <UnderConstruction/>
+              </Route>
+
               <Route path="">
                 <Redirect to="/login"/>
               </Route>
             </Switch>
           }
+
+        <Footer/>
       </Router>
     )
 }

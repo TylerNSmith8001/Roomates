@@ -11,5 +11,4 @@ function RoommateContextProvider(props){
     )
 
 }
-
 export {RoommateContextProvider, RoommateContext}
