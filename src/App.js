@@ -1,6 +1,8 @@
 import React, {useState} from "react"
 import {BrowserRouter as Router, Switch, Route, Link, Redirect} from "react-router-dom"
 
+import Header from "./Header"
+import Footer from "./Footer"
 import Home from "./Home"
 import About from "./About"
 import Contact from "./Contact"
@@ -14,17 +16,13 @@ function App() {
 
     //maybe allow for a home page that doesn't force to login?
 
-    let [isLoggedIn, setIsLoggedIn] = useState(true);
+    let [isLoggedIn, setIsLoggedIn] = useState(false);
 
     return (
-        <Router>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-            </nav>
-            
-            {isLoggedIn ?
+      <Router>
+          {isLoggedIn ?
+            <>
+              <Header isLogged="isLoggedIn"/>
               <Switch>
                 <Route path="/login">
                 <Redirect to="/"/>
@@ -39,19 +37,20 @@ function App() {
                     <Contact/>
                 </Route>
               </Switch>
+              <Footer isLogged="isLoggedIn"/>
+            </>
+            :
 
-              :
-
-              <Switch>
-                <Route path="/login">
-                  <LogIn/>
-                </Route>
-                <Route path="">
-                  <Redirect to="/login"/>
-                </Route>
-              </Switch>
-            }
-        </Router>
+            <Switch>
+              <Route path="/login">
+                <LogIn setIsLoggedIn={setIsLoggedIn}/>
+              </Route>
+              <Route path="">
+                <Redirect to="/login"/>
+              </Route>
+            </Switch>
+          }
+      </Router>
     )
 }
 export default App

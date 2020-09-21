@@ -1,7 +1,7 @@
 {
-  "short_name": "Roomates",
-  "name": "And They Were Roomates",
-  "description": "A simple bill spliting & tracking application for roomates.",
+  "short_name": "Roommates",
+  "name": "And They Were Roommates",
+  "description": "A simple bill spliting & tracking application for roommates.",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
