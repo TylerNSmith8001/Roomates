@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
+import {Alert} from 'react-bootstrap';
 
 function ToDoItem(props){
     let [completed, setCompleted] = useState(props.completed);
 
     return (
-        <div className="todo-item">
+        <Alert variant={ completed ? "secondary" : "primary" } className="todo-item">
             <input type="checkbox" checked={completed} onChange={() => setCompleted( prevCompleted => !prevCompleted ) }/>
-            <p style={completed ? {color: 'grey', textDecoration: 'line-through'} : {}}>{props.text}</p>
-        </div>
+            <span style={completed ? {color: 'grey', textDecoration: 'line-through'} : {}}>{props.text}</span>
+        </Alert>
     );
 }
 
