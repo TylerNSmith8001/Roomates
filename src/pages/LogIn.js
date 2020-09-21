@@ -16,20 +16,20 @@ function LogIn(props) {
     useEffect(() => usernameInputRef.current.focus(),[]);
 
     //pull in user
-    let {setRoommate, findRoomateByUsername, createRoomate} = useRoommate();
+    let {setRoommate, getRoommateByUsername, createRoommate} = useRoommate();
 
     //LogIn Clicked
     function onLogIn(e){
         e.preventDefault();
 
         //check to see if a user by that name already exists if so copy their data over
-        let temp_roommate = findRoomateByUsername(username.trim());
+        let temp_roommate = getRoommateByUsername(username.trim());
         
         //if not create a new user by that name
         if(!temp_roommate)
-            temp_roommate = createRoomate(username.trim())
+            temp_roommate = createRoommate(username.trim())
 
-        //set current roomate
+        //set current roommate
         setRoommate(temp_roommate);
 
         //remember username if isRememberMe
@@ -54,13 +54,14 @@ function LogIn(props) {
             <LogInFrame>
                 <Card.Body>
                     <Card.Title>
-                        LogIn
-                        <br/>
-                        <small className="text-secondary pl-2">(mock up - just provide username and "login")</small>
-                        <br/>
-                        <small className="text-secondary pl-2">(not mobile friendly yet)</small>
+                        Log In
+                        <hr/>
                     </Card.Title>
-                    <hr/>
+                    <small className="text-secondary pl-2">(mock up - just provide username and "login")</small>
+                    <br/>
+                    <small className="text-secondary pl-2">(not mobile friendly yet)</small>
+                    <br/>
+                    <br/>
                     <Form>
                         <Form.Group controlId="username">
                             <Form.Label srOnly>Username</Form.Label>

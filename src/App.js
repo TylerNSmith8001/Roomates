@@ -3,20 +3,17 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom
 
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Home from "./Home"
+import Home from "./pages/Home"
+import Setup from "./pages/Setup"
 import UnderConstruction from "./pages/UnderConstruction"
 import LogIn from "./pages/LogIn"
 import LogOut from "./pages/LogOut"
+import useRoommate from "./hooks/useRoommate"
 
 function App() {    
-    //don't forget to use useRouteMatch if needed
-    //"/wasdf/wasdf/:somevar"{this will go in route} and useParams(){this will go in detail component and will get :somevar}
-    //figure out how to call a function to change current url/path via react-router-dom
-    //useHistory might be what we need...... useHistory().push("/something/something") is how we do that....
-
-    //maybe allow for a home page that doesn't force to login?
 
     let [isLoggedIn, setIsLoggedIn] = useState(false);
+    let {roommate} = useRoommate();
 
     return (
       <Router>
@@ -45,7 +42,7 @@ function App() {
                 </Route>
 
                 <Route path="">
-                  <Home/>
+                  { roommate.homeId ? <Home/> : <Setup/> }
                 </Route>
               </Switch>
             </>
@@ -53,7 +50,7 @@ function App() {
 
             <Switch>
               <Route path="/login">
-                <LogIn setIsLoggedIn={setIsLoggedIn}/>
+                { false ? <Setup></Setup> : <LogIn setIsLoggedIn={setIsLoggedIn}/>}
               </Route>
               
               <Route exact path="/about">

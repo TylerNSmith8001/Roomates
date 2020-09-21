@@ -20,7 +20,7 @@ function UnderConstruction(props) {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-muted">
-                    <button type="button" class="btn btn-link" onClick={ e => { e.preventDefault(); history.goBack() }}>Go Back</button>
+                    <button type="button" className="btn btn-link" onClick={ e => { e.preventDefault(); history.goBack() }}>Go Back</button>
                 </Card.Footer>
             </LogInFrame>
     )

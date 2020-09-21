@@ -1,10 +1,10 @@
 import React from "react"
 import {Card} from "react-bootstrap"
+import FloatingCenter from "../components/FloatingCenter"
 
 function LogInFrame(props) {
     return (
-            <div className="d-flex justify-content-center align-items-center" style={{position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)"}}>
-
+            <FloatingCenter>
                 <Card className="text-center" style={{width: "26rem"}}>
                     <Card.Header>
                         <div className="my-n2">
@@ -20,7 +20,7 @@ function LogInFrame(props) {
                     </Card.Header>
                     {props.children}
                 </Card>
-            </div>
+            </FloatingCenter>
     )
 }
 
