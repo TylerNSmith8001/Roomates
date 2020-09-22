@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState} from "react"
 import { Card, Col, Row, Button } from "react-bootstrap";
 import useRoommate from "../hooks/useRoommate"
 import homes from "../data/homes";
 import Splits from "../components/Splits";
 
-function Home(props) {
+function Home() {
 
     let {roommate, setRoommate} = useRoommate();
 
     let [home, setHome] = useState(
-        homes.find( home => home.id == roommate.homeId)
+        homes.find( home => home.id === roommate.homeId)
     );
 
     let [month, setMonth] = useState(new Date().toISOString().substr(0, 7));
@@ -37,7 +37,7 @@ function Home(props) {
                               <div className="input-group-prepend">
                                 <label className="input-group-text" htmlFor="viewSelect">View</label>
                               </div>
-                              <select id="viewSelect" value={view} onChange={ e => setView(e.target.value) } disabled title="disabled - will toggle between view options, list only for now, might become a button toggle">{/**ref={} onChange={}*/}
+                              <select id="viewSelect" style={{width: "6rem", textAlign: "center"}} value={view} onChange={ e => setView(e.target.value) } disabled title="disabled - will toggle between view options, list only for now, might become a button toggle">{/**ref={} onChange={}*/}
                                 <option value="list">List</option>
                                 <option value="Calendar">Calendar</option>
                               </select>
@@ -49,7 +49,7 @@ function Home(props) {
                                 <label className="input-group-text" htmlFor="monthPicker">Month</label>
                               </div>
                               {/**replace with boot strap date pick extension */}
-                              <input type="month" id="monthPicker" value={month} onChange={ e => setMonth(e.target.value) } disabled title="disabled - will select what month is to be shown - needs replace with bootstrap date picker"/>{/**min="2018-03" value="2018-05"*/}
+                              <input type="month" id="monthPicker" style={{width: "6rem", textAlign: "center"}} value={month} onChange={ e => setMonth(e.target.value) } disabled title="disabled - will select what month is to be shown - needs replace with bootstrap date picker"/>{/**min="2018-03" value="2018-05"*/}
                             </div>
                         </div>
                     </Col>
@@ -67,7 +67,7 @@ function Home(props) {
                     </Col>
                     <Col>
                         <h3 className="m-0 text-right">
-                            Total: $??.?? (+/-Δ)
+                            Total: $??.?? (±Δ)
                         </h3>
                     </Col>
                 </Row>

@@ -1,10 +1,10 @@
 import React from "react";
 import splits from "../data/splits";
-import Split from "../components/Split"
+import Split from "../components/Split";
 
 function Splits(props){
 
-    let {roommate, home, month: current_month, view} = props;
+    let {home, month: current_month, view} = props;
 
     let found_splits = splits.filter(
             split => 
@@ -17,9 +17,7 @@ function Splits(props){
                     ||
                     !split.endDate
                 )
-    ).map( split => <Split key={split.id} split={split}/>);
-
-    console.debug(found_splits);
+    ).map( split => <Split key={split.id} split={split} current_month={current_month} home={home}/>);
 
     return(
         <>

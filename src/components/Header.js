@@ -15,7 +15,7 @@ function Header() {
         <Container className="p-2 pr-4 mx-0 mb-3 h3 border-bottom border-dark" style={{backgroundColor: "rgba(128,128,128,0.5)", boxShadow: "rgba(0,0,0,0.5) 0rem 0.5rem 2rem", maxWidth: "100vw", overflow: "hidden"}}>
             <Row>
                 <Col className="text-left">
-                    <button type="button" class="btn btn-link" onClick={ () => history.push('/')}>
+                    <button type="button" className="btn btn-link" onClick={ () => history.push('/')}>
                         {/*Icon and they were... Roommates*/}
                         <img src="/android-chrome-192x192.png" alt="Smiling Face with Smiling Eyes and Hand Covering Mouth" style={{height:"2rem", width:"2rem"}}/>
                         <span className="pl-2 h3 position-relative" style={{top: "0.4rem", color: "black"}}>Roommates</span>

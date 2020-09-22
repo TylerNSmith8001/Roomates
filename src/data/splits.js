@@ -3,7 +3,7 @@ let splits = [
         id: 1,
         name: "Rent",
         startDate: "2020-01-01",
-        endDate: null,
+        endDate: "",
         period: "monthly",
         instances:[
             {
@@ -13,18 +13,15 @@ let splits = [
                 total: 1050,
                 roommates:[
                     {
-                        id: 1,
                         roommateId: 1,
-                        split: 400
+                        split: 350
                     },
                     {
-                        id: 2,
                         roommateId: 3,
                         split: 400
                     },
                     {
-                        id: 3,
-                        roommateId: 4,
+                        roommateId: 5,
                         split: 250
                     }
                 ]
