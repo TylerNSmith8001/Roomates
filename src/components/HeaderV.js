@@ -1,15 +1,10 @@
 import React from "react"
 import { Row, Col, Container } from "react-bootstrap"
-import {Link, useHistory} from "react-router-dom"
-import useRoommate from "../hooks/useRoommate"
+import {Link} from "react-router-dom"
 
-function Header() {
-    //pull in user
-    let {roommate} = useRoommate();
+function Header(props) {
 
-    let history = useHistory()
-
-    let hour = (new Date()).getHours();
+    const {roommate, history, greeting} = props;
 
     return (
         <Container className="p-2 pr-4 mx-0 mb-3 h3 border-bottom border-dark" style={{backgroundColor: "rgba(128,128,128,0.5)", boxShadow: "rgba(0,0,0,0.5) 0rem 0.5rem 2rem", maxWidth: "100vw", overflow: "hidden"}}>
@@ -22,9 +17,9 @@ function Header() {
                         <small className="pl-2 position-relative h6 text-dark" style={{top: "-1.15rem", left: "-10.25rem"}}>and they were...</small>
                     </button>
                 </Col>
-                <Col className="text-right">
-                    <span className="h5 pr-3">
-                        {hour < 5 ? "Good Evening" : hour < 12 ? "Good Morning" : hour <= 17 ? "Good Afternoon" : "Good Evening"}, {roommate.username}
+                <Col className="text-right d-flex align-items-center justify-content-end">
+                    <span className="h5 m-0 pr-3">
+                        {greeting}, {roommate.username}
                     </span>
                     <Link to="/logout" className="btn btn-primary font-weight-bold">
                         Log Out

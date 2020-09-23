@@ -1,13 +1,15 @@
 import React, {useState} from "react"
 import {BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom"
 
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Home from "./pages/Home"
-import Setup from "./pages/Setup"
-import UnderConstruction from "./pages/UnderConstruction"
-import LogIn from "./pages/LogIn"
-import LogOut from "./pages/LogOut"
+import HeaderC from "./components/HeaderC"
+import FooterV from "./components/FooterV"
+
+import HomeC from "./pages/Home/HomeC"
+import SetupV from "./pages/Setup/SetupV"
+import UnderConstructionV from "./pages/UnderConstruction/UnderConstructionV"
+import LogInC from "./pages/LogIn/LogInC"
+import LogOutCV from "./pages/LogOut/LogOutCV"
+
 import useRoommate from "./hooks/useRoommate"
 
 function App() {    
@@ -19,30 +21,36 @@ function App() {
       <Router>
           {isLoggedIn ?
             <>
-              <Header isLogged="isLoggedIn"/>
+              <HeaderC isLogged="isLoggedIn"/>
               <Switch>
                 <Route path="/login">
                   <Redirect to="/"/>
                 </Route>
                 <Route exact path="/logout">
-                  <LogOut setIsLoggedIn={setIsLoggedIn}/>
+                  <LogOutCV setIsLoggedIn={setIsLoggedIn}/>
                 </Route>
 
                 <Route exact path="/about">
-                  <UnderConstruction/>
+                  <UnderConstructionV/>
                 </Route>
                 <Route exact path="/contact">
-                  <UnderConstruction/>
+                  <UnderConstructionV/>
                 </Route>
                 <Route exact path="/privacy">
-                  <UnderConstruction/>
+                  <UnderConstructionV/>
                 </Route>
                 <Route exact path="/terms">
-                  <UnderConstruction/>
+                  <UnderConstructionV/>
+                </Route>
+                <Route exact path="/join-home">
+                  <UnderConstructionV/>
+                </Route>
+                <Route exact path="/new-home">
+                  <UnderConstructionV/>
                 </Route>
 
                 <Route path="">
-                  { roommate.homeId ? <Home/> : <Setup/> }
+                  { roommate.homeId ? <HomeC/> : <SetupV/> }
                 </Route>
               </Switch>
             </>
@@ -50,20 +58,26 @@ function App() {
 
             <Switch>
               <Route path="/login">
-                { false ? <Setup></Setup> : <LogIn setIsLoggedIn={setIsLoggedIn}/>}
+                <LogInC setIsLoggedIn={setIsLoggedIn}/>
               </Route>
               
               <Route exact path="/about">
-                <UnderConstruction/>
+                <UnderConstructionV/>
               </Route>
               <Route exact path="/contact">
-                <UnderConstruction/>
+                <UnderConstructionV/>
               </Route>
               <Route exact path="/privacy">
-                <UnderConstruction/>
+                <UnderConstructionV/>
               </Route>
               <Route exact path="/terms">
-                <UnderConstruction/>
+                <UnderConstructionV/>
+              </Route>
+              <Route exact path="/forgot-password">
+                <UnderConstructionV/>
+              </Route>
+              <Route exact path="/alt-login">
+                <UnderConstructionV/>
               </Route>
 
               <Route path="">
@@ -72,7 +86,7 @@ function App() {
             </Switch>
           }
 
-        <Footer/>
+        <FooterV/>
       </Router>
     )
 }

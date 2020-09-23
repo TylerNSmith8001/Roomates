@@ -1,13 +1,13 @@
 import React from "react"
-import useRoommate from "../hooks/useRoommate"
+import useRoommate from "../../hooks/useRoommate"
 import {Redirect} from "react-router-dom"
 
-function Header(props) {
+function LogOutCV(props) {
     //pull in user
     let {setRoommate} = useRoommate();
 
     //clear roommate
-    setRoommate({});
+    setTimeout( () => setRoommate({}), 1);
 
     //logout
     props.setIsLoggedIn(false);
@@ -17,4 +17,4 @@ function Header(props) {
     )
 }
 
-export default Header
+export default LogOutCV

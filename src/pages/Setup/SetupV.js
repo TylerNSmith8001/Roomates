@@ -1,14 +1,14 @@
 import React from "react"
 import {Card} from "react-bootstrap"
-import FloatingCenter from "../components/FloatingCenter"
+import FloatingCenterV from "../../components/FloatingCenterV"
 import { useHistory } from 'react-router-dom'
 
-function Setup(props) {
+function SetupV(props) {
 
     let history = useHistory()
 
     return (
-        <FloatingCenter>
+        <FloatingCenterV>
             <Card bg="primary" border="dark" text="white" style={{ width: '18rem', height: '14rem' }} className="d-inline-block mx-4">
                 <Card.Header className="text-center h4 border-dark">
                     Start New Home
@@ -32,8 +32,8 @@ function Setup(props) {
                     </svg>
                 </div>
             </Card>
-        </FloatingCenter>
+        </FloatingCenterV>
     )
 }
 
-export default Setup
+export default SetupV

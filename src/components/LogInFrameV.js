@@ -1,10 +1,10 @@
 import React from "react"
 import {Card} from "react-bootstrap"
-import FloatingCenter from "../components/FloatingCenter"
+import FloatingCenterV from "./FloatingCenterV"
 
-function LogInFrame(props) {
+function LogInFrameV(props) {
     return (
-            <FloatingCenter>
+            <FloatingCenterV>
                 <Card className="text-center" style={{width: "26rem"}}>
                     <Card.Header>
                         <div className="my-n2">
@@ -20,8 +20,8 @@ function LogInFrame(props) {
                     </Card.Header>
                     {props.children}
                 </Card>
-            </FloatingCenter>
+            </FloatingCenterV>
     )
 }
 
-export default LogInFrame
+export default LogInFrameV

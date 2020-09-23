@@ -2,7 +2,7 @@ import React from "react"
 import { Row, Col, Container } from "react-bootstrap"
 import {Link} from "react-router-dom"
 
-function Footer() {
+function FooterV() {
     return (
         <Container className="p-2 mx-0 mt-3 mb-0 h6 border-top border-dark position-fixed text-light" style={{backgroundColor: "rgb(0,47,87)", maxWidth: "100vw", overflow: "hidden", bottom:0}}>
             <Row>
@@ -35,4 +35,4 @@ function Footer() {
     )
 }
 
-export default Footer
+export default FooterV

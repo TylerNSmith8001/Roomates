@@ -28,6 +28,30 @@ let roommates = [
         username: "Kenteh Smith",
         head: false,
         homeId: 1
+    },
+    {
+        id: 6,
+        username: "admin",
+        head: true,
+        homeId: 2
+    },
+    {
+        id: 7,
+        username: "Diane Rodriguez",
+        head: false,
+        homeId: 2
+    },
+    {
+        id: 8,
+        username: "Nicole Gallagher",
+        head: false,
+        homeId: 2
+    },
+    {
+        id: 9,
+        username: "Verna Villa",
+        head: false,
+        homeId: 2
     }
 ];
 
