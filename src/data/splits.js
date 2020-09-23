@@ -276,6 +276,151 @@ let splits = [
                 ]
             }
         ]
+    },
+    {
+        id: 11,
+        name: "Shawarma",
+        startDate: "2008-05-02",
+        endDate: "",
+        period: "monthly",
+        instances:[
+            {
+                id: 1,
+                date:"2020-09-01",
+                splitType:"explicit",
+                total: 25,
+                roommates:[
+                    {
+                        roommateId: 10,
+                        split: 5
+                    },
+                    {
+                        roommateId: 11,
+                        split: 5
+                    },
+                    {
+                        roommateId: 12,
+                        split: 5
+                    },
+                    {
+                        roommateId: 14,
+                        split: 5
+                    },
+                    {
+                        roommateId: 15,
+                        split: 5
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 12,
+        name: "Comcast",
+        startDate: "2008-05-02",
+        endDate: "",
+        period: "monthly",
+        instances:[
+            {
+                id: 1,
+                date:"2020-09-01",
+                splitType:"explicit",
+                total: 173,
+                roommates:[
+                    {
+                        roommateId: 13,
+                        split: 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 13,
+        name: "Insurance",
+        startDate: "2008-05-02",
+        endDate: "",
+        period: "monthly",
+        instances:[
+            {
+                id: 1,
+                date:"2020-09-01",
+                splitType:"explicit",
+                total: 10030000,
+                roommates:[
+                    {
+                        roommateId: 10,
+                        split: 10000
+                    },
+                    {
+                        roommateId: 11,
+                        split: 10000
+                    },
+                    {
+                        roommateId: 13,
+                        split: 10000000
+                    },
+                    {
+                        roommateId: 15,
+                        split: 10000
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 14,
+        name: "Water",
+        startDate: "2008-05-02",
+        endDate: "",
+        period: "monthly",
+        instances:[
+            {
+                id: 1,
+                date:"2020-09-01",
+                splitType:"explicit",
+                total: 263,
+                roommates:[
+                    {
+                        roommateId: 10,
+                        split: 187
+                    },
+                    {
+                        roommateId: 11,
+                        split: 23
+                    },
+                    {
+                        roommateId: 12,
+                        split: 17
+                    },
+                    {
+                        roommateId: 15,
+                        split: 36
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 15,
+        name: "Rent",
+        startDate: "2008-05-02",
+        endDate: "",
+        period: "monthly",
+        instances:[
+            {
+                id: 1,
+                date:"2020-09-01",
+                splitType:"explicit",
+                total: 10000000,
+                roommates:[
+                    {
+                        roommateId: 10,
+                        split: 10000000
+                    }
+                ]
+            }
+        ]
     }
 ];
 

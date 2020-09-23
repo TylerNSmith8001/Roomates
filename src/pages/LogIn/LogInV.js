@@ -18,9 +18,11 @@ function LogIn(props) {
                         Log In
                         <hr/>
                     </Card.Title>
-                    <small className="text-secondary pl-2">(this is a work in progress and is a "mock up" at this point)</small>
+                    <small className="text-secondary pl-2">this is a work in progress and is a "mock up" at this point.</small>
                     <br/>
-                    <small className="text-secondary pl-2">(login as "admin" or "Tyler Smith" without a password)</small>
+                    <small className="text-secondary pl-2">view this on a full monitor, other resolutions have not been considered.</small>
+                    <br/>
+                    <small className="text-secondary pl-2">login as "Tony Stark" or "Tyler Smith" or "admin" without a password.</small>
                     <br/>
                     <br/>
                     <Form>

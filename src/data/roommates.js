@@ -52,6 +52,42 @@ let roommates = [
         username: "Verna Villa",
         head: false,
         homeId: 2
+    },
+    {
+        id: 10,
+        username: "Tony Stark",
+        head: false,
+        homeId: 3
+    },
+    {
+        id: 11,
+        username: "Steve Rodgers",
+        head: false,
+        homeId: 3
+    },
+    {
+        id: 12,
+        username: "Bruce Banner",
+        head: false,
+        homeId: 3
+    },
+    {
+        id: 13,
+        username: "\"The Hulk\"",
+        head: false,
+        homeId: 3
+    },
+    {
+        id: 14,
+        username: "Thor Odinson",
+        head: false,
+        homeId: 3
+    },
+    {
+        id: 15,
+        username: "Natasha Romanoff",
+        head: false,
+        homeId: 3
     }
 ];
 

@@ -10,6 +10,12 @@ let homes = [
         name: "Genericville",
         roommateIds: [6,7,8,9],
         splitIds:[5,6,7,8,9,10]
+    },
+    {
+        id: 3,
+        name: "Stark Tower",
+        roommateIds: [10,11,12,13,14,15],
+        splitIds:[11,12,13,14,15]
     }
 ];
 
