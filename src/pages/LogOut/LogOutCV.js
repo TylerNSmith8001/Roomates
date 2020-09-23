@@ -13,7 +13,7 @@ function LogOutCV(props) {
     props.setIsLoggedIn(false);
 
     return (
-        <Redirect to="/login"/>
+        <Redirect to="/Roommates/login"/>
     )
 }
 

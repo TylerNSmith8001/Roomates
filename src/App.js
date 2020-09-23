@@ -23,29 +23,29 @@ function App() {
             <>
               <HeaderC isLogged="isLoggedIn"/>
               <Switch>
-                <Route path="/login">
-                  <Redirect to="/"/>
+                <Route path="/Roommates/login">
+                  <Redirect to="/Roommates"/>
                 </Route>
-                <Route exact path="/logout">
+                <Route exact path="/Roommates/logout">
                   <LogOutCV setIsLoggedIn={setIsLoggedIn}/>
                 </Route>
 
-                <Route exact path="/about">
+                <Route exact path="/Roommates/about">
                   <UnderConstructionV/>
                 </Route>
-                <Route exact path="/contact">
+                <Route exact path="/Roommates/contact">
                   <UnderConstructionV/>
                 </Route>
-                <Route exact path="/privacy">
+                <Route exact path="/Roommates/privacy">
                   <UnderConstructionV/>
                 </Route>
-                <Route exact path="/terms">
+                <Route exact path="/Roommates/terms">
                   <UnderConstructionV/>
                 </Route>
-                <Route exact path="/join-home">
+                <Route exact path="/Roommates/join-home">
                   <UnderConstructionV/>
                 </Route>
-                <Route exact path="/new-home">
+                <Route exact path="/Roommates/new-home">
                   <UnderConstructionV/>
                 </Route>
 
@@ -57,31 +57,31 @@ function App() {
             :
 
             <Switch>
-              <Route path="/login">
+              <Route path="/Roommates/login">
                 <LogInC setIsLoggedIn={setIsLoggedIn}/>
               </Route>
               
-              <Route exact path="/about">
+              <Route exact path="/Roommates/about">
                 <UnderConstructionV/>
               </Route>
-              <Route exact path="/contact">
+              <Route exact path="/Roommates/contact">
                 <UnderConstructionV/>
               </Route>
-              <Route exact path="/privacy">
+              <Route exact path="/Roommates/privacy">
                 <UnderConstructionV/>
               </Route>
-              <Route exact path="/terms">
+              <Route exact path="/Roommates/terms">
                 <UnderConstructionV/>
               </Route>
-              <Route exact path="/forgot-password">
+              <Route exact path="/Roommates/forgot-password">
                 <UnderConstructionV/>
               </Route>
-              <Route exact path="/alt-login">
+              <Route exact path="/Roommates/alt-login">
                 <UnderConstructionV/>
               </Route>
 
               <Route path="">
-                <Redirect to="/login"/>
+                <Redirect to="/Roommates/login"/>
               </Route>
             </Switch>
           }

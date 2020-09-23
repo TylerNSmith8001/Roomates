@@ -13,16 +13,16 @@ function FooterV() {
                     <Container>
                         <Row>
                             <Col>
-                                <Link to="/about" className="text-light">About</Link>
+                                <Link to="/Roommates/about" className="text-light">About</Link>
                             </Col>
                             <Col>
-                                <Link to="/contact" className="text-light">Contact</Link>
+                                <Link to="/Roommates/contact" className="text-light">Contact</Link>
                             </Col>
                             <Col>
-                                <Link to="/privacy" className="text-light">Privacy Policy</Link>
+                                <Link to="/Roommates/privacy" className="text-light">Privacy Policy</Link>
                             </Col>
                             <Col>
-                                <Link to="/terms" className="text-light">Terms of Service</Link>
+                                <Link to="/Roommates/terms" className="text-light">Terms of Service</Link>
                             </Col>
                         </Row>
                     </Container>

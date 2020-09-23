@@ -22,7 +22,7 @@ function Header(props) {
                     <span className="h5 m-0 pr-3">
                         {greeting}, {roommate.username}
                     </span>
-                    <Link to="/logout" className="btn btn-primary font-weight-bold">
+                    <Link to="/Roommates/logout" className="btn btn-primary font-weight-bold">
                         Log Out
                     </Link>
                 </Col>

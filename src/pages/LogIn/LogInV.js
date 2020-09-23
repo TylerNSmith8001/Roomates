@@ -43,9 +43,9 @@ function LogIn(props) {
                     <Button variant="danger" className="mt-2" style={{width: "75%"}} disabled>Register</Button>
                 </Card.Body>
                 <Card.Footer className="text-muted">
-                    <Link to="/forgot-password">Forgot Password</Link>
+                    <Link to="/Roommates/forgot-password">Forgot Password</Link>
                     <span className="mx-2">-or-</span>
-                    <Link to="/alt-login">Login With ...</Link>
+                    <Link to="/Roommates/alt-login">Login With ...</Link>
                 </Card.Footer>
             </LogInFrameV>
     )
