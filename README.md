@@ -1,5 +1,5 @@
 ## Hosted on GitHub Pages
-(https://tylernsmith8001.github.io/Roommates/)
+[https://tylernsmith8001.github.io/Roommates/](https://tylernsmith8001.github.io/Roommates/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
