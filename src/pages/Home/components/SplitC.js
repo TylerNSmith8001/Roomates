@@ -22,7 +22,7 @@ function SplitC(props){
             due: {...prevSplitSum.due, [splitId]:due},
             delta: {...prevSplitSum.delta, [splitId]:Math.abs(delta)}
         }));
-    }, [splitInstance,delta] );
+    }, [splitInstance,delta] ); // eslint-disable-line react-hooks/exhaustive-deps
 
     function addRoommateToSplitInstance(roommateId){
         setSplitInstance(
