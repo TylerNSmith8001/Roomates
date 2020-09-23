@@ -1,6 +1,7 @@
 import React from "react"
 import {Card} from "react-bootstrap"
 import FloatingCenterV from "./FloatingCenterV"
+import icon from "../assets/icon.png"
 
 function LogInFrameV(props) {
     return (
@@ -14,7 +15,7 @@ function LogInFrameV(props) {
                                 <div className="text-warning position-absolute" style={{top:0, right:0}}>
                                     WIP
                                 </div>
-                                <img src="/android-chrome-192x192.png" alt="Smiling Face with Smiling Eyes and Hand Covering Mouth" className="position-absolute" style={{top:"-0.5rem", left:"0.5rem", height:"3rem", width:"3rem"}}/>
+                                <img src={icon} alt="Smiling Face with Smiling Eyes and Hand Covering Mouth" className="position-absolute" style={{top:"-0.5rem", left:"0.5rem", height:"3rem", width:"3rem"}}/>
                             </h1>
                         </div>
                     </Card.Header>

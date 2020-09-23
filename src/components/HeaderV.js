@@ -1,6 +1,7 @@
 import React from "react"
 import { Row, Col, Container } from "react-bootstrap"
 import {Link} from "react-router-dom"
+import icon from "../assets/icon.png"
 
 function Header(props) {
 
@@ -12,7 +13,7 @@ function Header(props) {
                 <Col className="text-left">
                     <button type="button" className="btn btn-link" onClick={ () => history.push('/')}>
                         {/*Icon and they were... Roommates*/}
-                        <img src="/android-chrome-192x192.png" alt="Smiling Face with Smiling Eyes and Hand Covering Mouth" style={{height:"2rem", width:"2rem"}}/>
+                        <img src={icon} alt="Smiling Face with Smiling Eyes and Hand Covering Mouth" style={{height:"2rem", width:"2rem"}}/>
                         <span className="pl-2 h3 position-relative" style={{top: "0.4rem", color: "black"}}>Roommates</span>
                         <small className="pl-2 position-relative h6 text-dark" style={{top: "-1.15rem", left: "-10.25rem"}}>and they were...</small>
                     </button>
